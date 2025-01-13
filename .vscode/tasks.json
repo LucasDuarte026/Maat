@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+
+        {
+            "label": "Pre-Debug Script",
+            "type": "shell",
+            "command": "./pre_debug.sh"
+        }
+    ]
+}

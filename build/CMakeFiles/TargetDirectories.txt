@@ -1,0 +1,3 @@
+/home/luska/Minas-A6B-Control/build/CMakeFiles/EtherCAT_Test.dir
+/home/luska/Minas-A6B-Control/build/CMakeFiles/edit_cache.dir
+/home/luska/Minas-A6B-Control/build/CMakeFiles/rebuild_cache.dir

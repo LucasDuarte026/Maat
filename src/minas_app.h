@@ -1,7 +1,7 @@
 #ifndef _MINAS_APP_H
 #define _MINAS_APP_H
 
-#define NETWORK_ADAPTER "enp4s0"
+#define NETWORK_ADAPTER "enp2s0"
 
 //-- time stamp period in nanoseconds
 #define TIME_STAMP_PERIOD 4e+6
@@ -33,12 +33,12 @@ public:
     void minasInit(void);
     void minasFree(void);
 
-    void minasConfig(MinasHandle _handle, uint32_t _pos, 
-                    uint32_t _vel = 0x2000000, uint32_t _acc = 0x5000000, uint32_t _dec = 0x2500000);
+    void minasConfig(MinasHandle _handle, uint32_t _pos, uint32_t _vel = 0x2000000, uint32_t _acc = 0x5000000, uint32_t _dec = 0x2500000);
+    // void minasConfigDegrees(MinasHandle _handle, double target_degrees, uint32_t _vel, uint32_t _acc, uint32_t _dec);
     void minasUnitCtrl(MinasHandle _handle, double _round, uint32_t _cycle);
 
     void minasCtrl(double _round);
-
+    // void minasCtrlDegrees(double target_degrees);
     void printMsg(MinasHandle _handle, uint32_t _cycle);
     void printMsgInput(MinasHandle _handle);
     void printMsgOutput(MinasHandle _handle);

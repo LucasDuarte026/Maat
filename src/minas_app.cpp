@@ -78,6 +78,14 @@ void MinasApp::minasFree(void)
     cout << "=========>> [Leave minasFree]" << endl;
 }
 
+// // created by me
+// void MinasApp::minasConfigDegrees(MinasHandle _handle, double target_degrees,
+//                                   uint32_t _vel, uint32_t _acc, uint32_t _dec) {
+//     double _round = target_degrees / 360.0;
+//     uint32_t target_position = vecInitialPos[_handle] + (0x800000 * _round);
+//     minasConfig(_handle, target_position, _vel, _acc, _dec);
+// }
+
 void MinasApp::minasConfig(MinasHandle _handle, uint32_t _pos, 
                                                     uint32_t _vel, uint32_t _acc, uint32_t _dec)
 {
@@ -126,6 +134,7 @@ void MinasApp::minasConfig(MinasHandle _handle, uint32_t _pos,
 
     cout << "=========>> [Leave minasConfig]" << endl;
 }
+
 
 void MinasApp::minasUnitCtrl(MinasHandle _handle, double _round, uint32_t _cycle)
 {
@@ -209,6 +218,15 @@ void MinasApp::minasCtrl(double _round)
 
     cout << "=========>> [Leave minasCtrl]" << endl;
 }
+// // created by me
+// void MinasApp::minasCtrlDegrees(double target_degrees) {
+//     for (uint8_t clientNo = 0; clientNo < hMinas.size(); clientNo++) {
+//         vecInput[clientNo] = vecClient[clientNo]->readInputs();
+//         vecInitialPos[clientNo] = vecInput[clientNo].position_actual_value;
+
+//         minasConfigDegrees(clientNo, target_degrees, 0x16000000, 0x80000000, 0x80000000);
+//     }
+// }
 
 void MinasApp::printMsg(MinasHandle _handle, uint32_t _cycle)
 {

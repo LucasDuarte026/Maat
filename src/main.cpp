@@ -9,7 +9,7 @@
 
 using namespace std;
 
-#define NETWORK_ADAPTER "enp4s0"
+#define NETWORK_ADAPTER "enp2s0"
 
 int main(int argc, char *argv[])
 {
@@ -20,13 +20,17 @@ int main(int argc, char *argv[])
 
     hollow.minasInit();
 
-    hollow.minasCtrl(10);
+    hollow.minasCtrl(0.25);
+    cout << "   -> line_control_1" << endl;
+    hollow.minasCtrl(0.25);
+    cout << "   -> line_control_2" << endl;
+    hollow.minasCtrl(0.25);
+    cout << "   -> line_control_3" << endl;
+    hollow.minasCtrl(0.25);
+    cout << "   -> line_control_4" << endl;
 
-    hollow.minasCtrl(-10);
-
-    hollow.minasCtrl(10);
-
-    hollow.minasCtrl(-10);
+    //    hollow.minasCtrlDegrees(180);
+    //         cout << "   -> line_control_2" << endl;
 
     hollow.minasFree();
 

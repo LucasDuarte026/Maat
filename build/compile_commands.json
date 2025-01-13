@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/luska/Minas-A6B-Control/build",
+  "command": "/usr/bin/g++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -I/home/luska/Minas-A6B-Control/include -g -o CMakeFiles/EtherCAT_Test.dir/src/ethercat_manager.cpp.o -c /home/luska/Minas-A6B-Control/src/ethercat_manager.cpp",
+  "file": "/home/luska/Minas-A6B-Control/src/ethercat_manager.cpp",
+  "output": "CMakeFiles/EtherCAT_Test.dir/src/ethercat_manager.cpp.o"
+},
+{
+  "directory": "/home/luska/Minas-A6B-Control/build",
+  "command": "/usr/bin/g++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -I/home/luska/Minas-A6B-Control/include -g -o CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o -c /home/luska/Minas-A6B-Control/src/main.cpp",
+  "file": "/home/luska/Minas-A6B-Control/src/main.cpp",
+  "output": "CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/luska/Minas-A6B-Control/build",
+  "command": "/usr/bin/g++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -I/home/luska/Minas-A6B-Control/include -g -o CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o -c /home/luska/Minas-A6B-Control/src/minas_app.cpp",
+  "file": "/home/luska/Minas-A6B-Control/src/minas_app.cpp",
+  "output": "CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o"
+},
+{
+  "directory": "/home/luska/Minas-A6B-Control/build",
+  "command": "/usr/bin/g++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -I/home/luska/Minas-A6B-Control/include -g -o CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o -c /home/luska/Minas-A6B-Control/src/minas_client.cpp",
+  "file": "/home/luska/Minas-A6B-Control/src/minas_client.cpp",
+  "output": "CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o"
+},
+{
+  "directory": "/home/luska/Minas-A6B-Control/build",
+  "command": "/usr/bin/g++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -I/home/luska/Minas-A6B-Control/include -g -o CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o -c /home/luska/Minas-A6B-Control/src/time_stamp.cpp",
+  "file": "/home/luska/Minas-A6B-Control/src/time_stamp.cpp",
+  "output": "CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o"
+}
+]

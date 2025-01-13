@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug EtherCAT_Test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/EtherCAT_Test",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            //"miDebuggerPath": "/usr/bin/gdb",
+            "miDebuggerPath": "/home/luska/Minas-A6B-Control/gdb_debug.sh",
+            
+            "setupCommands": [
+                {
+                    "description": "Habilitar formatação padrão do gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            //"preLaunchTask": "Set Capabilities"
+            "preLaunchTask": "Pre-Debug Script"
+
+        }
+    ]
+}
