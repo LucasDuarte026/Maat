@@ -38,42 +38,110 @@ void help()
     fprintf(stderr, "    -h, --help          Print this message and exit\n");
 }
 
+void hmMode(minas_control::MinasClient *client, minas_control::MinasOutput output, minas_control::MinasInput input)
+{
+    int counter = 0;
+    printf("\t->\thm mode init\n");
+
+    client->setSwitchSpeed(8000000);
+    client->setZeroSpeed(8000000);
+    client->setHomingAcceleration(33554432);    
+    client->setHomingTorqueLimit(500);
+    client->setHomingDetectionTime(2048);
+    client->setHomingDetectionVelocity(33554432);
+    client->setHomingMode(14);
+    
+    client->writeOutputs(output);
+    while (!(input.statusword & 0x1000))
+    {
+        client->readInputs();
+        int bit10 = (input.statusword >> 10) & 1;
+        int bit12 = (input.statusword >> 12) & 1;
+        int bit13 = (input.statusword >> 13) & 1;
+
+        // Exibindo os valores dos bits
+        printf("bit 13: %d (homing error)\tbit 12: %d (homing attained)\tbit 10: %d (target reached) \n", bit13, bit12, bit10);
+        // if (counter % 100 == 0)
+        // {
+        //     printf("err = %04x, ctrl %04x, status %04x, op_mode = %2d, pos = %08x, vel = %08x, tor = %08x\n",
+        //            input.error_code, output.controlword, input.statusword, input.operation_mode, input.position_actual_value, input.velocity_actual_value, input.torque_actual_value);
+        //     if (input.statusword & 0x0400)
+        //     { // target reached (bit 10)
+        //         printf("target reached\n");
+        //         break;
+        //     }
+        //     printf("Input:\n");
+        //     printf(" 603Fh %08x :Error code\n", input.error_code);
+        //     printf(" 6041h %08x :Statusword\n", input.statusword);
+        //     printf(" 6061h %08x :Modes of operation display\n", input.operation_mode);
+        //     printf(" 6064h %08x :Position actual value\n", input.position_actual_value);
+        //     printf(" 606Ch %08x :Velocity actual value\n", input.velocity_actual_value);
+        //     printf(" 6077h %08x :Torque actual value\n", input.torque_actual_value);
+        //     printf(" 60B9h %08x :Touch probe status\n", input.touch_probe_status);
+        //     printf(" 60BAh %08x :Touch probe pos1 pos value\n", input.touch_probe_posl_pos_value);
+        //     printf(" 60FDh %08x :Digital inputs\n", input.digital_inputs);
+        //     printf("Output:\n");
+        //     printf(" 6040h %08x :Controlword\n", output.controlword);
+        //     printf(" 6060h %08x :Mode of operation\n", output.operation_mode);
+        //     printf(" 6071h %08x :Target Torque\n", output.target_torque);
+        //     printf(" 6072h %08x :Max Torque\n", output.max_torque);
+        //     printf(" 607Ah %08x :Target Position\n", output.target_position);
+        //     printf(" 6080h %08x :Max motor speed\n", output.max_motor_speed);
+        //     printf(" 60B8h %08x :Touch Probe function\n", output.touch_probe_function);
+        //     printf(" 60FFh %08x :Target Velocity\n", output.target_velocity);
+        //     printf(" 60B0h %08x :Position Offset\n", output.position_offset);
+        // }
+        counter++;
+    }
+}
+
+void ppMode(minas_control::MinasClient *client, minas_control::MinasOutput output, minas_control::MinasInput input)
+{
+    // control model setup (see statusword(6041.h) 3) p.107)
+    client->writeOutputs(output);
+    while (!(input.statusword & 0x1000))
+    { // bit12 (set-point-acknowledge)
+        input = client->readInputs();
+    }
+    output.controlword &= ~0x0010; // clear new-set-point (bit4)
+    client->writeOutputs(output);
+
+    printf("target position = %08x\n", output.target_position);
+}
+
 int main(int argc, char *argv[])
 {
     int operation_mode = 0x01; // (pp) position profile mode
     std::string ifname = "enp2s0";
-    double entrance = std::stod(argv[2]);
 
     printf("MINAS Simple Test using SOEM (Simple Open EtherCAT Master)\n");
-    while (1)
+
+    if (argc > 1)
     {
-        static struct option long_options[] = {
-            {"help", no_argument, 0, 'h'},
-            {"position_mode", no_argument, 0, 'p'},
-            {"cyclic_mode", no_argument, 0, 'c'},
-            {"interface", required_argument, 0, 'i'},
-        };
-        printf("revolution is %ld \n",entrance);
-        int option_index = 0;
-        int c = getopt_long(argc, argv, "hpci:", long_options, &option_index);
-        if (c == -1)
-            break;
-        switch (c)
+        if (strcmp(argv[1], "-h") == 0)
         {
-        case 'h':
             help();
             exit(0);
-            break;
-        case 'p':
-            operation_mode = 0x01; // (pp) position profile mode
-            break;
-        case 'c':
-            operation_mode = 0x08; // (csp) cyclic synchronous position mode
-            break;
-        case 'i':
-            ifname = optarg;
-            break;
         }
+        else if (strcmp(argv[1], "-p") == 0)
+        {
+            operation_mode = 0x01; // (pp) position profile mode
+            printf("operation_mode: %d \n", operation_mode);
+        }
+        else if (strcmp(argv[1], "-s") == 0)
+        {
+            operation_mode = 0x06; // (hm) homing mode
+            printf("operation_mode: %d \n", operation_mode);
+        }
+        else if (strcmp(argv[1], "-g") == 0)
+            operation_mode = 0x08; // (csp) cyclic synchronous position mode
+
+        else if (strcmp(argv[1], "-i") == 0)
+            ifname = optarg;
+    }
+    else
+    {
+        operation_mode = 0x06; // homing by standard
     }
     try
     {
@@ -100,7 +168,7 @@ int main(int argc, char *argv[])
             client->setInterpolationTimePeriod(4000); // 4 msec
 
             // servo on
-            client->servoOn();
+            client->servoOn(operation_mode);
 
             // get current positoin
             minas_control::MinasInput input = client->readInputs();
@@ -109,16 +177,22 @@ int main(int argc, char *argv[])
             // set target position
             minas_control::MinasOutput output;
             memset(&output, 0x00, sizeof(minas_control::MinasOutput));
+            printf("operation_mode is %d\n", operation_mode);
             if (operation_mode == 0x01)
             { // (pp) position profile mode
                 // output.target_position = (current_position > 0) ? (current_position - 0x100000) : (current_position + 0x100000);
                 // output.target_position = current_position;
-                output.target_position = 0 + 0x800000 * entrance; 
+                double entrance = std::stod(argv[2]);
+                output.target_position = 0 + 0x800000 * entrance;
+            }
+            else if (operation_mode == 0x06)
+            {
+                printf("teste sucedido\n");
             }
             else
             { // (csp) cyclic synchronous position mode
                 output.target_position = current_position;
-                printf("1target position = %08x\n", output.target_position);
+                printf("target position = %08x\n", output.target_position);
                 // output.target_position = 0;
             }
             output.max_motor_speed = 120; // rad/min
@@ -126,24 +200,15 @@ int main(int argc, char *argv[])
             output.max_torque = 500;      // 50% (unit 0.1%)
             output.controlword = 0x001f;  // move to operation enabled + new-set-point (bit4) + change set immediately (bit5)
 
-            // change to cyclic synchronous position mode
             output.operation_mode = operation_mode;
-            // output.operation_mode = 0x08; // (csp) cyclic synchronous position mode
-            // output.operation_mode = 0x01; // (pp) position profile mode
 
             // set profile velocity
             client->setProfileVelocity(0x20000000);
+            if (operation_mode == 0x01)
+                ppMode(client, output, input);
 
-            // pp control model setup (see statusword(6041.h) 3) p.107)
-            client->writeOutputs(output);
-            while (!(input.statusword & 0x1000))
-            { // bit12 (set-point-acknowledge)
-                input = client->readInputs();
-            }
-            output.controlword &= ~0x0010; // clear new-set-point (bit4)
-            client->writeOutputs(output);
-
-            printf("target position = %08x\n", output.target_position);
+            if (operation_mode == 0x06)
+                hmMode(client, output, input);
         }
 
         // 4ms in nanoseconds
