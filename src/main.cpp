@@ -19,15 +19,13 @@ int main(int argc, char *argv[])
     cout << "Panasonic MINAS A6B control using SOEM, start program." << endl;
 
     hollow.minasInit();
+    hollow.gotoAbsoluteZero();
+    hollow.minasCtrl(0.1) ;
+    hollow.minasCtrl(0.1) ;
+    hollow.minasCtrl(0.1) ;
+    hollow.minasCtrl(0.1) ;
+    hollow.minasCtrl(0.1) ;
 
-    hollow.minasCtrl(0.25);
-    cout << "   -> line_control_1" << endl;
-    hollow.minasCtrl(0.25);
-    cout << "   -> line_control_2" << endl;
-    hollow.minasCtrl(0.25);
-    cout << "   -> line_control_3" << endl;
-    hollow.minasCtrl(0.25);
-    cout << "   -> line_control_4" << endl;
 
     //    hollow.minasCtrlDegrees(180);
     //         cout << "   -> line_control_2" << endl;

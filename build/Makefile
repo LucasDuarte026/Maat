@@ -153,6 +153,30 @@ src/ethercat_manager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/ethercat_manager.cpp.s
 .PHONY : src/ethercat_manager.cpp.s
 
+src/homing.o: src/homing.cpp.o
+.PHONY : src/homing.o
+
+# target to build an object file
+src/homing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o
+.PHONY : src/homing.cpp.o
+
+src/homing.i: src/homing.cpp.i
+.PHONY : src/homing.i
+
+# target to preprocess a source file
+src/homing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.i
+.PHONY : src/homing.cpp.i
+
+src/homing.s: src/homing.cpp.s
+.PHONY : src/homing.s
+
+# target to generate assembly for a file
+src/homing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.s
+.PHONY : src/homing.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -225,6 +249,54 @@ src/minas_client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.s
 .PHONY : src/minas_client.cpp.s
 
+src/setPos.o: src/setPos.cpp.o
+.PHONY : src/setPos.o
+
+# target to build an object file
+src/setPos.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o
+.PHONY : src/setPos.cpp.o
+
+src/setPos.i: src/setPos.cpp.i
+.PHONY : src/setPos.i
+
+# target to preprocess a source file
+src/setPos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.i
+.PHONY : src/setPos.cpp.i
+
+src/setPos.s: src/setPos.cpp.s
+.PHONY : src/setPos.s
+
+# target to generate assembly for a file
+src/setPos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.s
+.PHONY : src/setPos.cpp.s
+
+src/teste.o: src/teste.cpp.o
+.PHONY : src/teste.o
+
+# target to build an object file
+src/teste.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o
+.PHONY : src/teste.cpp.o
+
+src/teste.i: src/teste.cpp.i
+.PHONY : src/teste.i
+
+# target to preprocess a source file
+src/teste.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.i
+.PHONY : src/teste.cpp.i
+
+src/teste.s: src/teste.cpp.s
+.PHONY : src/teste.s
+
+# target to generate assembly for a file
+src/teste.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.s
+.PHONY : src/teste.cpp.s
+
 src/time_stamp.o: src/time_stamp.cpp.o
 .PHONY : src/time_stamp.o
 
@@ -261,6 +333,9 @@ help:
 	@echo "... src/ethercat_manager.o"
 	@echo "... src/ethercat_manager.i"
 	@echo "... src/ethercat_manager.s"
+	@echo "... src/homing.o"
+	@echo "... src/homing.i"
+	@echo "... src/homing.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -270,6 +345,12 @@ help:
 	@echo "... src/minas_client.o"
 	@echo "... src/minas_client.i"
 	@echo "... src/minas_client.s"
+	@echo "... src/setPos.o"
+	@echo "... src/setPos.i"
+	@echo "... src/setPos.s"
+	@echo "... src/teste.o"
+	@echo "... src/teste.i"
+	@echo "... src/teste.s"
 	@echo "... src/time_stamp.o"
 	@echo "... src/time_stamp.i"
 	@echo "... src/time_stamp.s"

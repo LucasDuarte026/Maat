@@ -36,7 +36,7 @@ void MinasApp::minasInit(void)
         client->setInterpolationTimePeriod(4000);   // 4 msec
 
         //-- servo on
-        client->servoOn();
+        client->servoOn(1);
 
         //-- get a initial position for motor action once
         minas_control::MinasInput input = client->readInputs();
@@ -99,6 +99,7 @@ void MinasApp::minasConfig(MinasHandle _handle, uint32_t _pos,
     vecOutput[_handle].max_motor_speed = 1140;   // rad/min
     vecOutput[_handle].target_torque = 5000;     // 0% (unit 0.1%)
     vecOutput[_handle].max_torque = 5000;        // 50% (unit 0.1%)
+    // vecOutput[_handle].operation_mode = 0x08;   // cyclic motion
     vecOutput[_handle].operation_mode = 0x01;   // position profile mode (pp)
     vecOutput[_handle].controlword = 0x001f;    // move to operation enabled + new set-point (bit4) + change set immediately (bit5)
     
@@ -219,14 +220,61 @@ void MinasApp::minasCtrl(double _round)
     cout << "=========>> [Leave minasCtrl]" << endl;
 }
 // // created by me
-// void MinasApp::minasCtrlDegrees(double target_degrees) {
-//     for (uint8_t clientNo = 0; clientNo < hMinas.size(); clientNo++) {
-//         vecInput[clientNo] = vecClient[clientNo]->readInputs();
-//         vecInitialPos[clientNo] = vecInput[clientNo].position_actual_value;
+void MinasApp::gotoAbsoluteZero()
+{
+    cout << "=========>> [Enter gotoAbsoluteZero]" << endl;
 
-//         minasConfigDegrees(clientNo, target_degrees, 0x16000000, 0x80000000, 0x80000000);
-//     }
-// }
+    for (uint8_t clientNo = 0; clientNo < hMinas.size(); clientNo++)
+    {
+        cout << "  <<<  client no.  " << dec << clientNo << endl;
+        minas_control::MinasClient *client = vecClient[clientNo];
+
+        // Read the current position
+        vecInput[clientNo] = client->readInputs();
+        vecInitialPos[clientNo] = vecInput[clientNo].position_actual_value;
+
+        cout << "  <<<  initial position   " << vecInitialPos[clientNo] << endl;
+
+        // Target position is zero (absolute)
+        vecTargetPos[clientNo] = 0;
+
+        //-- Configure motion to move to absolute zero
+        minasConfig(clientNo, vecTargetPos[clientNo], 0x2C0000, 0x80000000, 0x80000000);
+    }
+
+    //-- Initialize timestamp for synchronization
+    timeStamp.timeStampInit();
+
+    for (uint32_t cycle = 0;; cycle++)
+    {
+        //-- Control all clients
+        for (uint8_t clientNo = 0; clientNo < hMinas.size(); clientNo++)
+        {
+            minasUnitCtrl(hMinas[clientNo], 0.0, cycle);
+        }
+
+        timeStamp.timeStampSync();
+
+        bool allArriveFlag = TRUE;
+        for (uint8_t clientNo = 0; clientNo < vecArriveFlag.size(); clientNo++)
+        {
+            allArriveFlag &= vecArriveFlag[clientNo];
+        }
+
+        if (allArriveFlag == TRUE)
+        {
+            for (uint8_t clientNo = 0; clientNo < hMinas.size(); clientNo++)
+            {
+                vecArriveFlag[clientNo] = FALSE;
+            }
+
+            break;
+        }
+    }
+
+    cout << "=========>> [Leave gotoAbsoluteZero]" << endl;
+}
+
 
 void MinasApp::printMsg(MinasHandle _handle, uint32_t _cycle)
 {

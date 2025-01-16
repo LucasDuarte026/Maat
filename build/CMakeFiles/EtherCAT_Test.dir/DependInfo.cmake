@@ -9,9 +9,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/luska/Minas-A6B-Control/src/ethercat_manager.cpp" "CMakeFiles/EtherCAT_Test.dir/src/ethercat_manager.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/ethercat_manager.cpp.o.d"
+  "/home/luska/Minas-A6B-Control/src/homing.cpp" "CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o.d"
   "/home/luska/Minas-A6B-Control/src/main.cpp" "CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o.d"
   "/home/luska/Minas-A6B-Control/src/minas_app.cpp" "CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o.d"
   "/home/luska/Minas-A6B-Control/src/minas_client.cpp" "CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o.d"
+  "/home/luska/Minas-A6B-Control/src/setPos.cpp" "CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o.d"
+  "/home/luska/Minas-A6B-Control/src/teste.cpp" "CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o.d"
   "/home/luska/Minas-A6B-Control/src/time_stamp.cpp" "CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o.d"
   )
 
