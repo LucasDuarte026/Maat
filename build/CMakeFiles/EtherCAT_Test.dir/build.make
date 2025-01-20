@@ -83,24 +83,10 @@ CMakeFiles/EtherCAT_Test.dir/src/ethercat_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EtherCAT_Test.dir/src/ethercat_manager.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luska/Minas-A6B-Control/src/ethercat_manager.cpp -o CMakeFiles/EtherCAT_Test.dir/src/ethercat_manager.cpp.s
 
-CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o: CMakeFiles/EtherCAT_Test.dir/flags.make
-CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o: /home/luska/Minas-A6B-Control/src/homing.cpp
-CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o: CMakeFiles/EtherCAT_Test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o -MF CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o.d -o CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o -c /home/luska/Minas-A6B-Control/src/homing.cpp
-
-CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luska/Minas-A6B-Control/src/homing.cpp > CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.i
-
-CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luska/Minas-A6B-Control/src/homing.cpp -o CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.s
-
 CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o: CMakeFiles/EtherCAT_Test.dir/flags.make
 CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o: /home/luska/Minas-A6B-Control/src/main.cpp
 CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o: CMakeFiles/EtherCAT_Test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o -MF CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o.d -o CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o -c /home/luska/Minas-A6B-Control/src/main.cpp
 
 CMakeFiles/EtherCAT_Test.dir/src/main.cpp.i: cmake_force
@@ -114,7 +100,7 @@ CMakeFiles/EtherCAT_Test.dir/src/main.cpp.s: cmake_force
 CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o: CMakeFiles/EtherCAT_Test.dir/flags.make
 CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o: /home/luska/Minas-A6B-Control/src/minas_app.cpp
 CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o: CMakeFiles/EtherCAT_Test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o -MF CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o.d -o CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o -c /home/luska/Minas-A6B-Control/src/minas_app.cpp
 
 CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.i: cmake_force
@@ -128,7 +114,7 @@ CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.s: cmake_force
 CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o: CMakeFiles/EtherCAT_Test.dir/flags.make
 CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o: /home/luska/Minas-A6B-Control/src/minas_client.cpp
 CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o: CMakeFiles/EtherCAT_Test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o -MF CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o.d -o CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o -c /home/luska/Minas-A6B-Control/src/minas_client.cpp
 
 CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.i: cmake_force
@@ -142,7 +128,7 @@ CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.s: cmake_force
 CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o: CMakeFiles/EtherCAT_Test.dir/flags.make
 CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o: /home/luska/Minas-A6B-Control/src/setPos.cpp
 CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o: CMakeFiles/EtherCAT_Test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o -MF CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o.d -o CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o -c /home/luska/Minas-A6B-Control/src/setPos.cpp
 
 CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.i: cmake_force
@@ -153,24 +139,10 @@ CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luska/Minas-A6B-Control/src/setPos.cpp -o CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.s
 
-CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o: CMakeFiles/EtherCAT_Test.dir/flags.make
-CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o: /home/luska/Minas-A6B-Control/src/teste.cpp
-CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o: CMakeFiles/EtherCAT_Test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o -MF CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o.d -o CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o -c /home/luska/Minas-A6B-Control/src/teste.cpp
-
-CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luska/Minas-A6B-Control/src/teste.cpp > CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.i
-
-CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luska/Minas-A6B-Control/src/teste.cpp -o CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.s
-
 CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o: CMakeFiles/EtherCAT_Test.dir/flags.make
 CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o: /home/luska/Minas-A6B-Control/src/time_stamp.cpp
 CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o: CMakeFiles/EtherCAT_Test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o -MF CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o.d -o CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o -c /home/luska/Minas-A6B-Control/src/time_stamp.cpp
 
 CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.i: cmake_force
@@ -184,31 +156,27 @@ CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.s: cmake_force
 # Object files for target EtherCAT_Test
 EtherCAT_Test_OBJECTS = \
 "CMakeFiles/EtherCAT_Test.dir/src/ethercat_manager.cpp.o" \
-"CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o" \
 "CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o" \
 "CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o" \
 "CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o" \
 "CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o" \
-"CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o" \
 "CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o"
 
 # External object files for target EtherCAT_Test
 EtherCAT_Test_EXTERNAL_OBJECTS =
 
 /home/luska/Minas-A6B-Control/bin/EtherCAT_Test: CMakeFiles/EtherCAT_Test.dir/src/ethercat_manager.cpp.o
-/home/luska/Minas-A6B-Control/bin/EtherCAT_Test: CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o
 /home/luska/Minas-A6B-Control/bin/EtherCAT_Test: CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o
 /home/luska/Minas-A6B-Control/bin/EtherCAT_Test: CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o
 /home/luska/Minas-A6B-Control/bin/EtherCAT_Test: CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o
 /home/luska/Minas-A6B-Control/bin/EtherCAT_Test: CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o
-/home/luska/Minas-A6B-Control/bin/EtherCAT_Test: CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o
 /home/luska/Minas-A6B-Control/bin/EtherCAT_Test: CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o
 /home/luska/Minas-A6B-Control/bin/EtherCAT_Test: CMakeFiles/EtherCAT_Test.dir/build.make
 /home/luska/Minas-A6B-Control/bin/EtherCAT_Test: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.83.0
 /home/luska/Minas-A6B-Control/bin/EtherCAT_Test: /home/luska/Minas-A6B-Control/lib/libsoem.a
 /home/luska/Minas-A6B-Control/bin/EtherCAT_Test: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.83.0
 /home/luska/Minas-A6B-Control/bin/EtherCAT_Test: CMakeFiles/EtherCAT_Test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable /home/luska/Minas-A6B-Control/bin/EtherCAT_Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/luska/Minas-A6B-Control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable /home/luska/Minas-A6B-Control/bin/EtherCAT_Test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EtherCAT_Test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

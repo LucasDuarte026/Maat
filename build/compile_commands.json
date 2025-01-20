@@ -7,12 +7,6 @@
 },
 {
   "directory": "/home/luska/Minas-A6B-Control/build",
-  "command": "/usr/bin/g++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -I/home/luska/Minas-A6B-Control/include -g -o CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o -c /home/luska/Minas-A6B-Control/src/homing.cpp",
-  "file": "/home/luska/Minas-A6B-Control/src/homing.cpp",
-  "output": "CMakeFiles/EtherCAT_Test.dir/src/homing.cpp.o"
-},
-{
-  "directory": "/home/luska/Minas-A6B-Control/build",
   "command": "/usr/bin/g++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -I/home/luska/Minas-A6B-Control/include -g -o CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o -c /home/luska/Minas-A6B-Control/src/main.cpp",
   "file": "/home/luska/Minas-A6B-Control/src/main.cpp",
   "output": "CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o"
@@ -34,12 +28,6 @@
   "command": "/usr/bin/g++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -I/home/luska/Minas-A6B-Control/include -g -o CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o -c /home/luska/Minas-A6B-Control/src/setPos.cpp",
   "file": "/home/luska/Minas-A6B-Control/src/setPos.cpp",
   "output": "CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o"
-},
-{
-  "directory": "/home/luska/Minas-A6B-Control/build",
-  "command": "/usr/bin/g++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -I/home/luska/Minas-A6B-Control/include -g -o CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o -c /home/luska/Minas-A6B-Control/src/teste.cpp",
-  "file": "/home/luska/Minas-A6B-Control/src/teste.cpp",
-  "output": "CMakeFiles/EtherCAT_Test.dir/src/teste.cpp.o"
 },
 {
   "directory": "/home/luska/Minas-A6B-Control/build",
