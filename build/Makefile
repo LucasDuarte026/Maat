@@ -225,30 +225,6 @@ src/minas_client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.s
 .PHONY : src/minas_client.cpp.s
 
-src/setPos.o: src/setPos.cpp.o
-.PHONY : src/setPos.o
-
-# target to build an object file
-src/setPos.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o
-.PHONY : src/setPos.cpp.o
-
-src/setPos.i: src/setPos.cpp.i
-.PHONY : src/setPos.i
-
-# target to preprocess a source file
-src/setPos.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.i
-.PHONY : src/setPos.cpp.i
-
-src/setPos.s: src/setPos.cpp.s
-.PHONY : src/setPos.s
-
-# target to generate assembly for a file
-src/setPos.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EtherCAT_Test.dir/build.make CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.s
-.PHONY : src/setPos.cpp.s
-
 src/time_stamp.o: src/time_stamp.cpp.o
 .PHONY : src/time_stamp.o
 
@@ -294,9 +270,6 @@ help:
 	@echo "... src/minas_client.o"
 	@echo "... src/minas_client.i"
 	@echo "... src/minas_client.s"
-	@echo "... src/setPos.o"
-	@echo "... src/setPos.i"
-	@echo "... src/setPos.s"
 	@echo "... src/time_stamp.o"
 	@echo "... src/time_stamp.i"
 	@echo "... src/time_stamp.s"

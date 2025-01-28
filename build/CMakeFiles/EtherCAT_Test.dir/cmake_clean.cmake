@@ -9,8 +9,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o.d"
   "CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o"
   "CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o.d"
-  "CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o"
-  "CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o.d"
   "CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o"
   "CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o.d"
 )

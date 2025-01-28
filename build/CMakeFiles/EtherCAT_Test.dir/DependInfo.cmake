@@ -12,7 +12,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/luska/Minas-A6B-Control/src/main.cpp" "CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/main.cpp.o.d"
   "/home/luska/Minas-A6B-Control/src/minas_app.cpp" "CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/minas_app.cpp.o.d"
   "/home/luska/Minas-A6B-Control/src/minas_client.cpp" "CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/minas_client.cpp.o.d"
-  "/home/luska/Minas-A6B-Control/src/setPos.cpp" "CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/setPos.cpp.o.d"
   "/home/luska/Minas-A6B-Control/src/time_stamp.cpp" "CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o" "gcc" "CMakeFiles/EtherCAT_Test.dir/src/time_stamp.cpp.o.d"
   )
 
